@@ -1,8 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { Router, useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const router=useRouter()
+  const handleckick =()=>{
+    router.push("/profile");
+    //router.replace("/profile")...it will replace the browser stack
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -12,6 +18,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <button onClick={handleckick}> Programitaclly go to Profile page</button>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
