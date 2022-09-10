@@ -24,3 +24,9 @@ a {
     background: black;
   }
 }
+.homemap{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+   margin-top: 50px;
+  gap :30px;
+}
